@@ -1,3 +1,26 @@
+def sortedSquares(nums):
+    squared_nums = [num ** 2 for num in nums]
+    return squared_nums.sort()
+
+nums = [-12, -8, -7, -5, 2, 4, 5, 11, 15]
+print(sortedSquares(nums))
+print(15**2)
+
+
+def simpleSortColors(nums):
+    countR = nums.count('R')
+    countG = nums.count('G')
+    countB = nums.count('B')
+    
+    sorted_nums = ['B'] * countB + ['G'] * countG + ['R'] * countR
+    return sorted_nums
+
+# Example usage
+nums = ['R', 'G', 'B', 'G', 'G', 'R', 'B', 'B', 'G']
+sorted_nums = simpleSortColors(nums)
+print(sorted_nums)
+
+
 def find_max_platforms(arrival_times, departure_times):
     arrival_times.sort()
     departure_times.sort()
@@ -45,3 +68,10 @@ result1 = find_max_platforms(arr_minutes, dep_minutes)
 result2 = find_max_platforms(arr2_minutes, dep2_minutes)
 print("Maximum platforms needed for first set of trains:", result1)
 print("Maximum platforms needed for second set of trains:", result2)
+
+
+my_dict = {101: 'John Doe', 102: 'Jane Smith', 103: 'Peter Johnson'}
+
+sorted_dict_by_values = dict(sorted(my_dict.items(), key=lambda item: item[1]))
+
+print(sorted_dict_by_values)
